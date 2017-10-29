@@ -233,10 +233,11 @@ static irqreturn_t ft5x06_ts_interrupt(int irq, void *dev_id)
 			break;
 
 		if (y == 2000) {
-			y = 1344;
 
                 if (data->disable_keys)
                     break;
+
+			y = 1344;
 
 			switch (x) {
 			case 180:
